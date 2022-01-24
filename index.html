@@ -2,11 +2,157 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поиск гостиниц в городе Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header class="page-header">
+      <nav class="navigation">
+        <a class="navigation-logo">
+          <img class="page-header-logo" src="" alt="Логотип сервиса поиска гостиниц города Седона.">
+        </a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link-active">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden hotels-numer">Выбрано 12 гостиниц</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link navigation-button" href="#searching">Хочу сюда</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-index">
+      <header class="index-header">
+        <h1 class="visually-hidden">Седона</h1>
+        <div class="welcome">
+          <img class="welcome-image" src="" alt="Приглашение в Седону">
+        </div>
+        <div class="welcome-label">
+          <b class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+          <p class="welcome-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
+      </header>
+      <section class="benefits">
+        <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <ul class="benefits-list">
+          <li class="benefits-item-wrapper">
+            <div class="benefits-item benefits-dark">
+              <h3 class="benefits-title">Настоящий городок</h3>
+              <span class="benefits-number">&mdash; &#8470;1 &mdash;</span>
+              <p class="benefits-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img class="benefits-photo" src="" alt="Городской пейзаж.">
+            <ul class="benefits-detail-list">
+              <li class="benefits-detail building-icon">
+                <b class="benefits-title">Жильё</b>
+                <p class="benefits-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="benefits-detail food-icon">
+                <b class="benefits-title">Еда</b>
+                <p class="benefits-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="benefits-detail gift-icon">
+                <b class="benefits-title">Сувениры</b>
+                <p class="benefits-description">Не только китайского, но и настоящего местного производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li class="benefits-item-wrapper">
+            <div class="benefits-item benefits-dark">
+              <h3 class="benefits-title">Там есть мост дьявола</h3>
+              <span class="benefits-number">&mdash; &#8470;2 &mdash;</span>
+              <p class="benefits-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <img class="benefits-photo" src="" alt="Узкий проход высоко в горах.">
+          </li>
+          <li class="benefits-item-wrapper">
+            <div class="benefits-item benefits-light">
+              <h3 class="benefits-title">Небольшая площадь</h3>
+              <span class="benefits-number">&mdash; &#8470;3 &mdash;</span>
+              <p class="benefits-description">Все достопримечательности находятся очень близко</p>
+            </div>
+          </li>
+          <li class="benefits-item-wrapper">
+            <div class="benefits-item benefits-blue">
+              <h3 class="benefits-title">Красивая дорога</h3>
+              <span class="benefits-number">&mdash; &#8470;4 &mdash;</span>
+              <p class="benefits-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+          </li>
+          <li class="benefits-item-wrapper">
+            <div class="benefits-item benefits-light">
+              <h3 class="benefits-title">Мало туристов</h3>
+              <span class="benefits-number">&mdash; &#8470;5 &mdash;</span>
+              <p class="benefits-description">Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="searching" id="searching">
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <b class="searching-title">Заинтересовались?</b>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="button" href="#">Поиск гостиницы в Седоне</a>
+      </section>
+      <section class="newsletter">
+        <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="newsletter-email">
+            <span class="visually-hidden">Email</span>
+          </label>
+          <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+          <button class="button newsletter-button" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="button" href="https://www.twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="button" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="button" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer-logo" href="https://htmlacademy.ru/">
+          <img class="page-footer-logo" src="" alt="Логотип HTMLAcademy.">
+        </a>
+      </section>
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 812 812-12-12</a>
+      </section>
+    </footer>
   </body>
 </html>
