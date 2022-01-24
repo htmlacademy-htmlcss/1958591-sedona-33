@@ -19,22 +19,23 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-active">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden"> Поиск </span>
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden"> Избранное </span>
+              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden hotels-numer">Выбрано 12 гостиниц</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-button" href="#">Хочу сюда</a>
+            <a class="navigation-link navigation-button" href="#catalog-hotel">Хочу сюда</a>
           </li>
         </ul>
       </nav>
@@ -143,7 +144,7 @@
           </li>
         </ul>
       </section>
-      <section class="catalog-hotel">
+      <section class="catalog-hotel" id="catalog-hotel">
         <h2 class="visually-hidden">Список гостиниц</h2>
         <ul class="hotel-list">
           <li class="hotel-card">
@@ -157,19 +158,19 @@
             <a class="hotel-card-button button-like button" href="#">В избранное</a>
             <ul class="stars-list">
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
             </ul>
             <div class="hotel-range">
@@ -188,13 +189,13 @@
             <a class="hotel-card-button button-like button" href="#">В избранное</a>
             <ul class="stars-list">
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
-                <span class="star"></span>
+                <span class="visually-hidden star"></span>
               </li>
               <li class="stars-item">
                 <span class="star"></span>
@@ -310,9 +311,7 @@
           </select>
         </label>
       </section>
-    </main>
-    <footer class="page-footer">
-      <section class="newsletter newsletter-innner">
+      <section class="newsletter-innner">
         <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -324,6 +323,8 @@ id="newsletter-email" required>
           <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
+    </main>
+    <footer class="page-footer">
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
@@ -349,9 +350,7 @@ id="newsletter-email" required>
       </section>
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <address class="footer-contacts-address">
-          <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 812 812-12-12</a>
-        </address>
+        <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 812 812-12-12</a>
       </section>
     </footer>
   </body>
