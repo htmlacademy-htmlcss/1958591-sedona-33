@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Поиск гостиниц в городе Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -34,23 +35,21 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-button" href="#searching">Хочу сюда</a>
+            <a class="button navigation-button" href="#searching">Хочу сюда</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-index">
+      <h1 class="visually-hidden">Седона</h1>
       <section class="index-header">
-        <h1 class="visually-hidden">Седона</h1>
         <div class="welcome">
-          <img class="welcome-image" src="images/welcome.svg" alt="Приглашение в Седону." width="458" height="352">
-        </div>
-        <div class="welcome-label">
-          <b class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
-          <p class="welcome-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-        </div>
+            <img class="welcome-image" src="images/welcome.svg" alt="Приглашение в Седону." width="458" height="352">
+         </div>
       </section>
       <section class="benefits">
+        <b class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+        <p class="welcome-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <ul class="benefits-list">
           <li class="benefits-item-wrapper">
@@ -61,7 +60,7 @@
             </div>
             <img class="benefits-photo" src="images/benefit-1.jpg" alt="Городской пейзаж." width="800" height="384">
             <ul class="benefits-detail-list">
-              <li class="benefits-detail building-icon">
+              <li class="benefits-detail benefits-blue building-icon">
                 <b class="benefits-title">Жильё</b>
                 <p class="benefits-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
@@ -69,7 +68,7 @@
                 <b class="benefits-title">Еда</b>
                 <p class="benefits-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li class="benefits-detail gift-icon">
+              <li class="benefits-detail benefits-blue gift-icon">
                 <b class="benefits-title">Сувениры</b>
                 <p class="benefits-description">Не только китайского, но и настоящего местного производства!</p>
               </li>
@@ -109,12 +108,12 @@
       <section class="searching" id="searching">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <b class="searching-title">Заинтересовались?</b>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="searching-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="button searching-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="newsletter">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="newsletter-email">
             <span class="visually-hidden">Email</span>
