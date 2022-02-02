@@ -18,24 +18,29 @@
 /*border: 4px solid #c00313; - красная рамка для отладки блоков*/
 
 
+
 body {
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #e5e5e5;
   color: #000000;
   padding-left: 40px;
   padding-right: 40px;
-}
-
-.body-container {
   width: 1200px;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   margin: 0 auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   padding: 0;
+}
+
+.page-footer,
+.page-header,
+.main-index,
+.main-inner
+{
+   background-color: #ffffff;
 }
 
 .button {
@@ -49,6 +54,21 @@ body {
   text-transform: uppercase;
   border: 0;
 }
+
+/*
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+*/
 
 .button-blue {
   background-color: #83B3D3;
@@ -156,6 +176,7 @@ color: #ffffff;
 .benefits-photo {
   max-width: 100%;
   object-fit: contain;
+  display: block;
   margin: auto;
 }
 
@@ -212,6 +233,22 @@ color: #ffffff;
   background-color: #ffffff;
 }
 
+/*
+.twitter::before {
+  content: " ";
+  background-color:  #ffffff;
+  background-image: url("../images/twitter.svg") ;
+  display: inline-flex;
+  width: 18px;
+  height: 15px;
+}
+
+
+.twitter {
+  background-image: url("../images/twitter.svg");
+}
+*/
+
 .footer-logo {
   padding-top: 19px;
   padding-left: 23px;
@@ -243,6 +280,7 @@ color: #ffffff;
   }
 
 .newsletter-inner {
+  text-align: center;
   color: #000000;
  }
 
@@ -331,6 +369,7 @@ color: #ffffff;
 .hotel-card-image{
   max-width: 100%;
   object-fit: contain;
+  display: block;
 }
 .hotel-range {
   background-color:  #F2F2F2;
@@ -338,6 +377,41 @@ color: #ffffff;
   text-transform: uppercase;
   text-align: center;
 }
+
+.four-stars::before {
+  content: " ";
+  background-image: url("../images/star.svg") ;
+  background-repeat: repeat-x;
+  display: block;
+  top:10px;
+  left:0px;
+  width: 91px;
+  height: 17px;
+ }
+
+ .three-stars::before {
+  content: " ";
+  background-image: url("../images/star.svg") ;
+  background-repeat: repeat-x;
+  display: block;
+  top:10px;
+  left:0px;
+  width: 68px;
+  height: 17px;
+ }
+
+ .two-stars::before {
+  content: " ";
+  background-image: url("../images/star.svg") ;
+  background-repeat: repeat-x;
+  display: block;
+  top:10px;
+  left:0px;
+  width: 43px;
+  height: 17px;
+ }
+
+
 
 .pagination-link {
   color: #ffffff;
