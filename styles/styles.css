@@ -960,7 +960,7 @@ img {
 .pagination-wrapper {
   display:flex;
   align-items: center;
-  margin-bottom: 73px;
+  margin-bottom: 65px;
 }
 
 .pagination-list {
@@ -968,7 +968,12 @@ img {
   padding: 0;
   list-style-type: none;
   display:flex;
-}
+  flex-wrap: wrap;
+ }
+
+.pagination-item {
+  margin-bottom: 8px;
+ }
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
