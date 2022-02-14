@@ -253,6 +253,8 @@ img {
   line-height: 28px;
   text-transform: uppercase;
   display:block;
+  padding-left: 110px;
+  padding-right: 110px;
   padding-top: 67px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -343,7 +345,6 @@ img {
 .gift-icon + .benefits-description {
   padding-left: 100px;
   padding-right: 100px;
-
 }
 
 .searching {
@@ -373,7 +374,8 @@ img {
   margin: 0 auto;
   margin: 0;
   padding: 0;
-  width: 720px;
+  padding-left: 310px;
+  padding-right: 310px;
   margin-bottom: 56px;
 }
 
@@ -1033,6 +1035,7 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 520px;
   display:flex;
   flex-wrap: wrap;
  }
