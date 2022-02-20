@@ -77,7 +77,7 @@
               <span class="navigation-hotels-rate">12</span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item item-button">
             <a
               class="button button-dark navigation-button"
               href="#searching"
@@ -98,11 +98,19 @@
                 class="breadcrumbs-link"
                 href="index.html"
               >
+                <svg
+                  width="12"
+                  height="12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/>
+                </svg>
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
           </ul>
           <section class="catalog-filter">
@@ -194,43 +202,39 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="catalog-filter-group catalog-filter-cost">
-                <legend class="catalog-filter-title">Стоимость, &#8381;</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control-label">
+              <div class="catalog-filter-group catalog-filter-cost">
+                <p class="catalog-filter-title filter-title-cost">Стоимость, &#8381;:</p>
+                  <div class="catalog-cost-wrapper">
+                    <label class="control-label-cost label-cost-left">
                       <input
-                        class="control-input control-input-price"
-                        type="number"
-                        min="0"
-                        max="9000"
+                        class="control-input-cost input-cost-left"
+                        type="text"
                         value="0"
                         name="price-min"
                       >
                       от
                     </label>
-                    <label class="control-label">
+                    <label class="control-label-cost label-cost-right">
                       <input
-                        class="control-input control-input-price"
-                        type="number"
-                        min="0"
-                        max="9000"
+                        class="control-input-cost input-cost-right "
+                        type="text"
                         value="9000"
                         name="price-max"
                       >
                       до
                     </label>
-                    <div class="filter-range">
-                      <div class="filter-range-bar"></div>
-                      <button class="filter-range-handle"></button>
-                      <button class="filter-range-handle"></button>
+                  </div>
+                  <div class="catalog-filter-range">
+                    <div class="filter-range-bar">
+                        <div class="range-bar-part"></div>
                     </div>
-                  </li>
-                </ul>
-              </fieldset>
+                    <button class="range-handle range-handle-right"></button>
+                    <button class="range-handle range-handle-left"></button>
+                  </div>
+                </div>
               <div class="catalog-filter-button">
                 <button
-                  class="button button-blue"
+                  class="button filter-button"
                   type="submit"
                 >
                   Применить
@@ -295,7 +299,9 @@
           <h2 class="visually-hidden">Список гостиниц</h2>
           <ul class="hotel-list">
             <li class="hotel-card">
-              <a class="hotel-card-link" href="#">
+              <a class="hotel-card-img-link"
+                href="#"
+                >
                 <img
                   class="hotel-card-image"
                   src="images/hotel-1.jpg"
@@ -303,6 +309,8 @@
                   width="300"
                   height="206"
                 >
+              </a>
+              <a class="hotel-card-title-link" href="#">
                 <h3 class="hotel-card-title">Amara Resort & Spa</h3>
               </a>
               <span  class="hotel-card-type">Гостиница</span>
@@ -332,7 +340,7 @@
             </li>
 
             <li class="hotel-card">
-              <a class="hotel-card-link" href="#">
+              <a class="hotel-card-img-link" href="#">
                 <img
                   class="hotel-card-image"
                   src="images/hotel-2.jpg"
@@ -340,6 +348,8 @@
                   width="300"
                   height="206"
                 >
+              </a>
+              <a class="hotel-card-title-link" href="#">
                 <h3 class="hotel-card-title">Desert Quail Inn</h3>
               </a>
               <span class="hotel-card-type">Гостиница</span>
@@ -365,7 +375,7 @@
             </li>
             <li class="hotel-card">
               <a
-                class="hotel-card-link"
+                class="hotel-card-img-link"
                 href="#"
               >
                 <img
@@ -375,6 +385,11 @@
                   width="300"
                   height="206"
                 >
+              </a>
+              <a
+                class="hotel-card-title-link"
+                href="#"
+              >
                 <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
               </a>
               <span  class="hotel-card-type">Гостиница</span>
@@ -403,7 +418,7 @@
               </div>
             </li>
             <li class="hotel-card">
-              <a class="hotel-card-link" href="#">
+              <a class="hotel-card-img-link" href="#">
                 <img
                   class="hotel-card-image"
                   src="images/hotel-4.jpg"
@@ -411,6 +426,8 @@
                   width="299"
                   height="206"
                 >
+              </a>
+              <a class="hotel-card-title-link" href="#">
                 <h3 class="hotel-card-title">GreenTree Inn</h3>
               </a>
               <span  class="hotel-card-type">Гостиница</span>
