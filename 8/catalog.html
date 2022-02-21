@@ -460,14 +460,12 @@
         </section>
         <section class="pagination">
           <h2 class="visually-hidden">Пагинация</h2>
-          <div class="pagination-divider">
-            <button
-              class="button pagination-show-more"
-              type="button"
-            >
-              Загрузить ещё
+          <button
+            class="button pagination-show-more"
+            type="button"
+          >
+            Загрузить ещё
           </button>
-          </div>
           <div class="pagination-wrapper">
             <ul class="pagination-list">
 
@@ -519,11 +517,12 @@
               </a>
               </li>
             </ul>
-            <label class="select-label pagination-label">Гостиниц на странице:
+            <label class="select-label pagination-label" for="select-hotel-number" >Гостиниц на странице:</label>
               <select
                 class="select-control select-hotel-number"
                 name="select-hotel-number"
                 aria-label="Сортировка"
+                id="select-hotel-number"
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -532,7 +531,6 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
               </select>
-            </label>
           </div>
         </section>
       </div>
