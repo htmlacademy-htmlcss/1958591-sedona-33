@@ -51,6 +51,8 @@
               href="#"
             >
               <svg
+                aria-hidden="true"
+                focusable="false"
                 width="18"
                 height="18"
                 fill="none"
@@ -68,6 +70,8 @@
               aria-label="Выбрано 12 гостиниц."
             >
               <svg
+                aria-hidden="true"
+                focusable="false"
                 width="18"
                 height="18"
                 fill="none"
@@ -100,6 +104,8 @@
                 href="index.html"
               >
                 <svg
+                  aria-hidden="true"
+                  focusable="false"
                   width="12"
                   height="12"
                   fill="none"
@@ -203,13 +209,13 @@
                   </li>
                 </ul>
               </fieldset>
-              <div class="catalog-filter-group catalog-filter-cost">
-                <p class="catalog-filter-title filter-title-cost">Стоимость, &#8381;:</p>
+              <fieldset class="catalog-filter-group catalog-filter-cost">
+                <legend class="catalog-filter-title filter-title-cost">Стоимость, &#8381;:</legend>
                   <div class="catalog-cost-wrapper">
                     <label class="control-label-cost label-cost-left">
                       <input
                         class="control-input-cost input-cost-left"
-                        type="text"
+                        type="number"
                         value="0"
                         name="price-min"
                       >
@@ -218,21 +224,26 @@
                     <label class="control-label-cost label-cost-right">
                       <input
                         class="control-input-cost input-cost-right "
-                        type="text"
+                        type="number"
                         value="9000"
                         name="price-max"
                       >
                       до
                     </label>
                   </div>
-                  <div class="catalog-filter-range">
+
                     <div class="filter-range-bar">
-                        <div class="range-bar-part"></div>
+                        <div class="range-bar-part" style="left: 0px; width: 227px">
+                        <button class="range-handle range-handle-right" type="button">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range-handle range-handle-left" type="button">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
                     </div>
-                    <button class="range-handle range-handle-right" type="button"></button>
-                    <button class="range-handle range-handle-left" type="button"></button>
+
                   </div>
-                </div>
+                </fieldset>
               <div class="catalog-filter-button">
                 <button
                   class="button filter-button"
@@ -257,15 +268,17 @@
           <b class="hotels-sort-title">Найдено гостиниц:
             <span class="hotels-number">38</span>
           </b>
-          <select
-            class="select-control select-hotel-price"
-            name="select-hotel-price"
-            aria-label="Сортировка"
-          >
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap" selected>Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
+          <div class="select sorting-type">
+            <select
+              class="select-control select-hotel-price"
+              name="select-hotel-price"
+              aria-label="Сортировка"
+            >
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+          </div>
           <ul class="mode-list">
             <li class="mode-item">
               <a
@@ -518,19 +531,21 @@
               </li>
             </ul>
             <label class="select-label pagination-label" for="select-hotel-number" >Гостиниц на странице:</label>
-              <select
-                class="select-control select-hotel-number"
-                name="select-hotel-number"
-                aria-label="Сортировка"
-                id="select-hotel-number"
-              >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4" selected>4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
+              <div class="select hotel-number">
+                <select
+                  class="select-control select-hotel-number"
+                  name="select-hotel-number"
+                  aria-label="Сортировка"
+                  id="select-hotel-number"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4" selected>4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
           </div>
         </section>
       </div>
@@ -575,7 +590,8 @@
                 href="https://www.twitter.com/htmlacademy_ru"
               >
                 <svg
-                  role="img"
+                  aria-hidden="true"
+                  focusable="false"
                   width="18"
                   height="15"
                   xmlns="http://www.w3.org/2000/svg"
@@ -591,7 +607,8 @@
                 href="https://www.facebook.com/htmlacademy"
               >
                 <svg
-                  role="img"
+                  aria-hidden="true"
+                  focusable="false"
                   width="10"
                   height="18"
                   xmlns="http://www.w3.org/2000/svg"
@@ -607,7 +624,8 @@
                 href="https://www.youtube.com/c/HTMLAcademyRUS"
               >
                 <svg
-                  role="img"
+                  aria-hidden="true"
+                  focusable="false"
                   width="20"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -633,8 +651,9 @@
             href="https://htmlacademy.ru/"
           >
             <svg
+              aria-hidden="true"
+              focusable="false"
               class="footer-logo-icon"
-              role="img"
               aria-label="Логотип HTML academy."
               width="115"
               height="33"

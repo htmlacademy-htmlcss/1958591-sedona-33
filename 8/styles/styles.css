@@ -158,10 +158,7 @@ img {
   line-height: 0;
   margin: 0;
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 24px 12px;
   position: relative;
  }
 
@@ -184,7 +181,7 @@ img {
   color: #756257
 }
 
-.navigation-user .navigation-link:hover path {
+.navigation-link:hover path {
   fill: #756257;
 }
 
@@ -192,13 +189,15 @@ img {
   outline: none;
   color: rgba(117, 98, 87, 0.3);
 }
-.navigation-user .navigation-link:active path {
+
+.navigation-link:active path {
   fill: rgba(117, 98, 87, 0.3);
 }
 
 .navigation-link:active > .navigation-hotels-rate {
   color: rgba(255, 255, 255, 0.3);
  }
+
 .item-button {
   padding-left: 20px;
   padding-top: 13px;
@@ -268,6 +267,7 @@ img {
   flex-wrap: wrap;
 }
 
+
 .benefits-item-wrapper {
   width: 400px;
   padding-top: 97px;
@@ -291,6 +291,10 @@ img {
 
 .benefits-item:nth-child(2n):not(.benefits-dark) {
   background-color: rgba(131,179,211,0.20);
+}
+.benefits-photo {
+ height: 100%;
+ object-fit: cover;
 }
 
 .benefits-title {
@@ -343,13 +347,14 @@ img {
 }
 
 .benefits-detail {
-  padding-top: 184px;
+  padding-top: 84px;
   padding-bottom: 89px;
 }
 .benefits-detail .benefits-title {
   position: relative;
   display: block;
   margin-bottom: 20px;
+  padding-top: 100px;
 }
 
 .benefits-detail .benefits-title::before {
@@ -359,21 +364,26 @@ img {
   transform: translate(-50%, 0px);
 }
 
+.benefits-detail:nth-child(2n) {
+  background-color: #ffffff;
+}
+
 .building-icon::before {
   content: url("../images/building-icon.svg");
-  top: -95px;
+  top: 0px;
  }
 
 .food-icon::before {
   content: url("../images/food-icon.svg");
-  top: -93px;
+  top: 0px;
  }
 
 .gift-icon::before {
   content: url("../images/gift-icon.svg");
-  top: -100px;
+  top: 0px;
  }
 
+/*
  .building-icon + .benefits-description {
   padding-left: 110px;
   padding-right: 110px;
@@ -388,6 +398,7 @@ img {
   padding-left: 100px;
   padding-right: 100px;
 }
+*/
 
 .searching {
   margin: 0;
@@ -721,7 +732,8 @@ img {
 .catalog-filter-group {
   margin: 0;
   padding: 0;
-  border-width: 0;
+  border: none;
+
 }
 
 .catalog-filter-title {
@@ -824,7 +836,7 @@ img {
   background: #FFFFFF;
   border-radius: 4px;
   margin-left: -40px;
-  outline-offset: none;
+  outline-offset: 0px;
 }
 
 .control-input:checked:focus + .input-infrastructure,
@@ -864,7 +876,7 @@ img {
   border-radius: 50%;
   margin-left: -40px;
   border:none;
-  outline-offset: none;
+  outline-offset: 0px;
 }
 
 .control-input:focus + .input-type {
@@ -908,7 +920,7 @@ img {
   box-sizing: border-box;
   cursor: pointer;
   width: 144px;
-  outline-offset: 0;
+  outline-offset: 0px;
   color:rgba(255, 255, 255, 0.6)
  }
 
@@ -924,6 +936,7 @@ img {
 .control-input-cost {
   padding:0;
   margin: 0;
+  font-family: inherit;
   font-size: 18px;
   line-height: 23px;
   color: #ffffff;
@@ -933,9 +946,15 @@ img {
   background: transparent;
   outline: none;
   border: none;
-  outline-offset: 0;
+  outline-offset: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.control-input-cost::-webkit-outer-spin-button,
+.control-input-cost::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .input-cost-left {
@@ -965,16 +984,13 @@ img {
 }
 
 .filter-range-bar {
+  position: relative;
   height: 4px;
   background: rgba(255, 255, 255, 0.3);
 }
 
-.catalog-filter-range {
-  position: relative;
-}
-
 .range-bar-part {
-  width: 80%;
+  position: absolute;
   height: 4px;
   background: #ffffff;
 }
@@ -991,7 +1007,7 @@ img {
   cursor: pointer;
 }
 
-.range-handle-left {
+.range-handle-right {
   left: 216px;
 }
 
@@ -1035,8 +1051,15 @@ img {
   margin-right: 192px;
 }
 
+.sorting-type {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 287px;
+}
+
 .select-control {
-  /*width: 100%;*/
+  width: 100%;
   font: inherit;
   font-size: 18px;
   line-height: 23px;
@@ -1044,18 +1067,16 @@ img {
   color: #333333;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
-}
-
-.select-hotel-price {
-  padding: 12px 18px;
-  padding-right: 100px;
-  border: 2px solid #E6E6E6;
-  border-radius: 4px;
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
   outline: none;
+}
+
+.select-hotel-price {
+  padding: 12px 18px;
+  padding-right: 100px;
 }
 
 .select-control:hover,
@@ -1156,7 +1177,7 @@ img {
 
 .hotel-card-img-link {
   grid-column: 1/-1;
-  outline-offset: none;
+  outline-offset: 0px;
 }
 
 /*если здесь убрать  display: block, нужно поставить в grid-template-rows 206px*/
@@ -1289,7 +1310,6 @@ img {
   border-top-color: #E6E6E6;
   border-top-style: solid;
   border-top-width:  1px;
-
 }
 
 .pagination-list {
@@ -1311,17 +1331,17 @@ img {
 }
 
 .pagination-button {
+  font-family: inherit;
   font-size: 20px;
   line-height: 25px;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
+  min-width: 55px;
   padding: 15px 0px;
   border-radius: 4px;
  }
-
 
 .pagination-current {
   color:  #000000;
@@ -1331,22 +1351,18 @@ img {
 .select-label {
   line-height: 24px;
   color: #333333;
-
-  padding-bottom: 8px;
+  margin-bottom: 8px;
   margin-right: 51px;
 }
-
+.hotel-number {
+  display: flex;
+  align-items: center;
+  width: 160px;
+}
 .select-hotel-number {
+  margin: 0;
   padding: 12px 12px;
-  padding-left: 20px;
-  padding-right: 130px;
-  border: 2px solid #E6E6E6;
-  border-radius: 4px;
-  background-image: url("../images/arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: right 20px center;
-  appearance: none;
-  outline: none;
+  padding-right: 100px;
   margin-bottom: 8px;
 }
 
@@ -1404,3 +1420,300 @@ img {
    color: rgba(255, 255, 255, 0.3);
  }
 
+ .modal-container {
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+ }
+
+ .modal {
+  position: relative;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 70px 70px;
+  padding-top: 62px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-search {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.modal-close-button:hover,
+.modal-close-button:active {
+  background: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active .close-button-icon {
+  opacity: 0.3;
+}
+
+.modal-title {
+  padding: o;
+  margin: 0;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  max-width: 500px;
+  margin-bottom: 60px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group {
+  margin:0;
+  display:flex;
+  align-items: center;
+}
+
+.field-group-date {
+  position: relative;
+}
+
+.modal-label,
+.field-modal {
+  font-size: 18px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.modal-label {
+  display: block;
+  width: 155px;
+}
+
+.field-modal {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.6);
+  display:block;
+  border: none;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  width: 382px;
+  padding: 5px 19px;
+ }
+
+.field-modal:not(:placeholder-shown) {
+  color: #000000;
+ }
+.field-modal:hover {
+  background: #E6E6E6;
+}
+.field-modal:focus {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.field-modal:active
+{
+  background-color: #ffffff;
+}
+
+.date-icon {
+  position: absolute;
+  top: 18px;
+  right: 19px;
+}
+
+ .modal-message {
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  width: 420px;
+  margin-left: auto;
+  margin-bottom: 11px;
+}
+
+.modal-message-error {
+color: #FF5757;
+}
+.modal-message-success {
+  color: #333333;
+}
+
+.field-group-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.field-group-adult {
+  justify-content: flex-end;
+  width: 288px;
+  margin-right: 56px;
+}
+
+.field-group-children {
+  justify-content: flex-end;
+  width: 240px;
+}
+
+.input-group {
+  margin: 0;
+  position: relative;
+  margin-left: auto;
+}
+
+.model-button-handle {
+  position: absolute;
+  top: 12px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.model-button-handle:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+.model-button-handle:hover path,
+.model-button-handle:focus path {
+  fill:  #000000;
+  opacity: 1;
+}
+
+.handle-plus {
+  right: 13px;
+}
+
+.handle-minus {
+  left: 13px;
+}
+
+.field-modal-people
+{ padding: 5px 0px;
+  width: 133px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.field-modal-people::-webkit-outer-spin-button,
+.field-modal-people::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.label-children {
+  width: 54px;
+}
+
+.modal-button-find {
+  padding: 10px 0;
+  font-size: 20px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.modal-button-information {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  background-image: url("../images/popup-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+.modal-button-information::before {
+  content: "";
+  position: absolute;
+  border-width: 0 9px 9px 9px;
+  border-style: solid;
+  border-color: #333333 transparent #333333 transparent;
+  z-index: 99;
+  opacity: 1;
+  top: 100%;
+
+  margin-top: 6px;
+  /*transform:  translateX(-50%) translatey(-100%) rotate(-180deg);*/
+  transform: translateX(-50%) ;
+}
+
+
+.modal-button-information::after {
+  content: "Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.";
+  position: absolute;
+
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  width: 256px;
+  pointer-events: none;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 18px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+  padding-right: 18px;
+
+  z-index: 99;
+  opacity: 1;
+  top: 100%;
+  left: 12px;
+  margin-top: 15px;
+  transform: translateX(-50%);
+ }
+
+
+.modal-button-information:hover::after,
+.modal-button-information:hover::before {
+  opacity: 1;
+  transition-delay: 1.0s;
+  transition: all 1.5s;
+}
+/*
+.modal-container-close
+{
+  display: none;
+}
+*/
