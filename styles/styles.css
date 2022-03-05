@@ -1012,6 +1012,8 @@ img {
   outline: none;
   border: none;
   outline-offset: 0;
+
+  -moz-appearance: textfield;
 }
 
 .control-input-cost::-webkit-outer-spin-button,
@@ -1020,10 +1022,6 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.control-input-cost {
-  -moz-appearance: textfield;
 }
 
 .input-cost-left {
@@ -1724,6 +1722,8 @@ img {
   text-align: center;
 
   border-radius: 4px;
+
+  -moz-appearance: textfield;
 }
 
 .field-modal-people::-webkit-outer-spin-button,
@@ -1732,10 +1732,6 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.field-modal-people {
-  -moz-appearance: textfield;
 }
 
 .label-children {
