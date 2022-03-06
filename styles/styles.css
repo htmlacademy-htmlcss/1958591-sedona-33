@@ -81,6 +81,12 @@ img {
   background-color: #7db54f;
 }
 
+.button:disabled,
+.button-dark:disabled,
+.button-contrast:disabled {
+  background-color: #e5e5e5;
+}
+
 .button:hover,
 .button:focus,
 .button:active {
@@ -1776,7 +1782,7 @@ img {
   border-width: 0 9px 9px 9px;
   border-style: solid;
   border-color: #333333 transparent #333333 transparent;
-  opacity: 1;
+  opacity: 0;
 
   transform: translateX(-50%);
   content: "";
@@ -1805,7 +1811,7 @@ img {
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  opacity: 1;
+  opacity: 0;
 
   transform: translateX(-50%);
   content: "Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.";
@@ -1819,7 +1825,8 @@ img {
   transition: all 1.5s;
 }
 
+/*
 .modal-container-close {
   display: none;
 }
-
+*/
